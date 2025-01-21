@@ -1,0 +1,149 @@
+
+body {
+    margin: 0;   
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+:root {
+    --primary: #1e3a8a;
+    --secondary: #1e40af;
+    --accent: #3b82f6;
+    --light: #f8fafc;
+    --dark: #0f172a;
+    --text: #e2e8f0;
+}
+
+.all-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 800px;
+    color: black;
+}
+
+.welcome-section, .login-section {
+    padding:40px;
+    padding-top: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    
+}
+
+
+.welcome-section {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: linear-gradient(135deg, #2a1178,#375dc5);
+    text-align: center;
+}
+.login-section{
+    background: linear-gradient(135deg, #395ab4,#163e6e);
+}
+
+.welcome-section h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.button1 {
+    background: var(--accent);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button1:hover {
+    transform: translateY(-3px);
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 14px;
+    color: #3b82f6;
+    text-decoration: double;
+}
+
+form input {
+    padding: 10px;
+    border-color: #1e3b8a00;
+    border: none;
+    border-radius: 5px;
+    background: rgba(75, 148, 179, 0.147);
+    color: rgb(255, 255, 255);
+}
+
+form input::placeholder{
+    color: #ffffff7c;
+}
+
+.button2 {
+    margin-top: 5px;
+    background: var(--accent);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.button2:hover {
+    transform: translateY(-3px);
+}
+
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-media img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Close Button */
+.close-btn {
+    padding-left: 100%;
+    padding-top: 0%;
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.description{
+    color: rgba(251, 251, 251, 0.689);
+}
