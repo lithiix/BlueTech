@@ -26,7 +26,8 @@ body {
     top: 0;
     width: 100%;
     padding: 1rem;
-    background: rgba(15, 23, 42, 0.95);
+    /* background: rgba(15, 23, 42, 0.95); */
+    background: rgba(23, 126, 152, 0.093);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -108,12 +109,33 @@ body {
 }
 
 /* Hero Section */
+.video-background {
+    
+    position:absolute;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .video-background {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .video-background {
+      width: auto;
+      height: 100%;
+    }
+  }
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary), var(--dark));
+    /* background: linear-gradient(135deg, var(--primary), var(--dark)); */
     color: var(--text);
     text-align: center;
     padding: 2rem;
@@ -169,6 +191,10 @@ body {
 }
 
 /* Sections */
+.services {
+    background: linear-gradient(to bottom, var(--dark), var(--primary));
+    padding: 6rem 2rem;
+}
 section {
     padding: 6rem 2rem;
 }
@@ -283,12 +309,12 @@ section {
 .about-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 /* Contact Section */
 .contact {
-    background: var(--dark);
+    background: linear-gradient(to bottom, var(--dark), var(--primary));
     padding: 6rem 2rem;
 }
 
