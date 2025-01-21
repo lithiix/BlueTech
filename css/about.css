@@ -19,7 +19,7 @@ body {
 /* Banner Section  */
 
 .banner {
-    background-image: url("/img/about-background.png") no-repeat center center/cover;
+    background-image: url("/img/about_bg.png") ;
     width: 100%;
     padding: 20px 0;
 }
