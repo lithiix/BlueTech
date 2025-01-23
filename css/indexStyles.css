@@ -492,6 +492,9 @@ section {
 }
 
 @media (max-width: 480px) {
+    .dropdown {
+        display: block;
+    }
     .footer-content {
         grid-template-columns: 1fr;
     }
