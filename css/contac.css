@@ -22,13 +22,14 @@ body {
     background-image: url("/img/about_bg.png") ;
     width: 100%;
     padding: 20px 0;
+    height: 650px;
 }
 
 .box-container {
     width: 70%;
     position: relative;
     margin: auto;
-    padding-top: 0%;
+    padding-top: 5%;
     padding-bottom: 20px;
     
 }
