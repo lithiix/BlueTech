@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --primary: #1e3a8a;
+  --primary--low: hsla(224, 64%, 33%, 0.25);
+  --secondary: 	#1e40af;
+  --accent: 	#3b82f6;
+  --light: #f8fafc;
+  --dark: #0f172a;
+  --dark--low: 	hsla(222, 47%, 11%, 0.5);
+  --text: #e2e8f0;
+  --body-font: "Poppins", sans-serif;
+  --title-font: "Cormorant Infant", serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--dark);
+  color: var(--text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Our Services styles */
+.section-image {
+  width: 100vw;
+  height: 110vh;
+}
+
+.services-background {
+  width: 100vw;
+  height: 110vh;
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+
+.service-body {
+  width: 60vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 20px 0;
+  border: 5px solid var(--accent);
+  border-radius: 20px;
+}
+
+.service-head {
+  font-size: 60px;
+  color: var(--accent);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-inline: auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card__article {
+  position: relative;
+  padding-left: 5%;
+  margin: 5%;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 5px solid var(--light);
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  background-color: var(--dark--low);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border: 4px solid var(--accent);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  margin-right: 5px;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  color: var(--accent);
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--light);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-image,
+  .services-background {
+    width: 100%;
+    height: 80vh;
+  }
+  .service-body {
+    height: 60vh;
+  }
+
+  .service-head {
+    font-size: 25px;
+  }
+
+  .card__description {
+    font-size: 12px;
+  }
+
+  .card__container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+  }
+
+  .card__article {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .card__img {
+    width: 160%;
+    height: 130%;
+  }
+
+  .card__data {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    font-size: 14px;
+    padding: 8px;
+    margin-left: 12px;
+  }
+
+  .card__button {
+    font-size: 12px;
+  }
+
+  .card__article.visible .card__data {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .service-body {
+    height: 90vh;
+  }
+  
+  .card__container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card__article {
+    flex-shrink: 0;
+    width: 90%;
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card__data {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .card__article.visible .card__data {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .section-image {
+    height: 170vh;
+  }
+  .services-background {
+    height: 170vh;
+  }
+
+  .service-body {
+    height: 155vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+  
+  .card__data {
+    width: 210px;
+  }
+
+  .card__title {
+    font-size: 15px;
+  }
+
+  .card__description {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  .section-image,
+  .services-background {
+    height: 120vh;
+  }
+
+  .service-body {
+    height: 110vh;
+  }
+
+  .card__data {
+    width: 210px;
+  }
+
+  .card__title {
+    font-size: 15px;
+  }
+
+  .card__description {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
