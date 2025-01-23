@@ -42,7 +42,7 @@ body {
 .blog-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 2rem;
