@@ -1,0 +1,136 @@
+/* General Reset */
+
+
+:root {
+    --primary: #1e3a8a;
+    --secondary: #1e40af;
+    --accent: #3b82f6;
+    --light: #f8fafc;
+    --dark: #0f172a;
+    --text: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--dark), var(--primary));
+    color: #e0e0e0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, var(--dark), var(--primary));
+    border-bottom: 1px solid #333;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #4b81d8;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+/* Overview Section */
+.overview {
+    padding: 40px;
+    text-align: center;
+}
+
+.overview h2 {
+    font-size: 28px;
+    color: #4b81d8;
+    margin-bottom: 20px;
+}
+
+.overview p {
+    font-size: 18px;
+    color: #b0b0b0;
+}
+
+/* Values Section */
+.values {
+    padding: 40px;
+    background: linear-gradient(to bottom, var(--dark), var(--primary));
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.values h2 {
+    font-size: 28px;
+    color: #4b81d8;
+    margin-bottom: 20px;
+}
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    background-color: #3d75cf27;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Section */
+.team {
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.team h2 {
+    font-size: 28px;
+    color: #4b81d8;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 200px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 4%;
+    margin-bottom: 10px;
+    
+}
+
