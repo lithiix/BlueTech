@@ -10,8 +10,8 @@ Welcome to our official website! This platform is designed to provide a seamless
 
 ## 🚀 Technologies Used
 - **HTML, CSS, JavaScript** – Core web technologies for structure, styling, and interactivity.
-- **Bootstrap/Tailwind CSS** *(if used)* – For responsive and modern UI components.
-- **FontAwesome** *(if used)* – For elegant icons.
+- **Bootstrap/Tailwind CSS**  – For responsive and modern UI components.
+- **FontAwesome**  – For elegant icons.
 
 ## 🎯 How to Use
 1. Clone this repository:
